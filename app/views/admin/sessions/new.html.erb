@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="col-md-5 col-md-offset-3">
+    <div class="jumbotron vertical-center" id="jumbo">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Admin Login</h3>
+        </div>
+        <div class="panel-body">
+          <%= form_tag admin_sessions_path do %>
+            <div class="field form-group">
+                <%= label_tag :username %><br />
+                <%= text_field_tag :username %>
+            </div>
+          
+            <div class="field form-group">
+                <%= label_tag :password %><br />
+                <%= password_field_tag :password %>
+            </div>
+            <div class="actions form-group">
+              <%= submit_tag 'Log in', class: 'btn btn-primary' %>
+            </div>
+          <% end %>
+          
+        </div>  <!--panel-body-->
+      </div> <!--panel-defalut-->
+    </div> <!--jumbotron-->
+  </div> <!--col-->
+</div> <!--container-->
