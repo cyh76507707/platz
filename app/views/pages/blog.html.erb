@@ -1,0 +1,27 @@
+<h1>블로그 페이지</h1>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>title</th>
+            <th>publish</th>
+            <th>actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <% @posts.each do |post| %>
+            <tr>
+                <td><%= truncate(post.title, length: 60, seperate: '') %></td>
+                <td><%= status_converter(post.publish, truthy: 'Active', falsey: 'Pending') %></td>
+                <td>
+                    <%= link_to 'Edit', edit_admin_post_path(post) %>
+                    <%= link_to 'Show', admin_post_path(post) %>
+                    <%= link_to 'Delete', admin_post_path(post), method: :delete, data: {confirm: 'Are you sure?'} %>
+                </td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
+
+<p><%= paginate @posts %></p>
