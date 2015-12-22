@@ -32,6 +32,8 @@ gem 'font-awesome-sass', '4.2.0'
 # Use paginator
 gem 'kaminari', '~> 0.16.3'
 
+gem 'paperclip', '~> 4.2.1'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 

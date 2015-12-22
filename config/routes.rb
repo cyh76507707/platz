@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get '/login' => 'admin/sessions#new'
   get '/logout' => 'admin/sessions#destroy'
 
+  resources :posts
+
   namespace :admin do
     resources :posts
     resources :notifications, only: [:index, :destroy]

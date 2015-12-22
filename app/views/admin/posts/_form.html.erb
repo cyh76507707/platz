@@ -1,9 +1,13 @@
 <p><%= render 'validation_errors', object: @post %></p>
 
-<%= form_for [:admin, @post] do |f| %>
+<%= form_for [:admin, @post], :html => { :multipart => true } do |f| %>
     <p>
         <%= f.label :title %><br />
         <%= f.text_field :title %>
+    </p>
+    <p>
+        <%= f.label :avatar %><br />
+        <%= f.file_field :avatar %>
     </p>
     <p>
         <%= f.label :content %><br />

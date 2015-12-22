@@ -19,34 +19,57 @@
   <%= csrf_meta_tags %>
   
 </head>
-<body>
-  <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <%= link_to 'PLATZ', root_path, class: 'navbar-brand' %>
-      </div>
-      <div class="collapse navbar-collapse" id="main-nav-collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to 'Menu', menu_path %></li>
-          <li><%= link_to 'Beans', beans_path %></li>
-          <li><%= link_to 'Blog', blog_path %></li>
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container -->
-  </nav>
 
-  <div class="container">
-    
-    
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
-    <%= yield %>
-  </div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <%= link_to 'PLATZ', root_path, class: 'navbar-brand page-scroll' %>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <%= link_to 'BLOG', blog_path %>
+                    </li>
+                    <li>
+                        <%= link_to 'SHOP' %>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/%ED%94%8C%EB%9D%BC%EC%B8%A0%EC%BB%A4%ED%94%BC-PLATZ-146284935541761/timeline"><i class="fa fa-facebook"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    
+  <%= yield %>
+
+  <!-- Script for Navbar -->
+  <script>
+
+    // jQuery to collapse the navbar on scroll
+    $(window).scroll(function() {
+        if ($(".navbar").offset().top > 50) {
+            $(".navbar-fixed-top").addClass("top-nav-collapse");
+        } else {
+            $(".navbar-fixed-top").removeClass("top-nav-collapse");
+        }
+    });
+    
+  </script>
 
 </body>
 </html>
