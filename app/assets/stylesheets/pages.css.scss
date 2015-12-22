@@ -616,3 +616,23 @@ footer p {
 }
 
 
+/*pagination*/
+
+.pagination > li > a, .pagination > li > span {
+    color: #9B9B9B;   
+}
+
+.pagination > .active > a {
+    background-color: #4A4A4A;
+}
+
+.pagination > .active > a:hover, 
+.pagination > .active > a:focus, 
+.pagination > .active > span, 
+.pagination > .active > span:hover, 
+.pagination > .active > span:focus {
+    background-color: #E3CA99;
+    border-color: #ddd;
+}
+
+
