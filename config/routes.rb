@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  mount Bootsy::Engine => '/bootsy', as: 'bootsy'
+  mount Ckeditor::Engine => '/ckeditor'
   root 'pages#home'
   get '/menu' => 'pages#menu'
   get '/beans' => 'pages#beans'
@@ -7,6 +9,7 @@ Rails.application.routes.draw do
 
   get '/login' => 'admin/sessions#new'
   get '/logout' => 'admin/sessions#destroy'
+  get '/admin' => 'admin/posts#index'
 
   resources :posts
 

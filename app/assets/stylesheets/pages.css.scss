@@ -22,7 +22,7 @@ html {
 }
 
 a {
-    color: #E3CA99;
+    color: #000;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -31,7 +31,20 @@ a {
 a:hover,
 a:focus {
     text-decoration: none;
-    color: #E3CA99;
+    color: #9B9B9B;
+}
+
+.btn a {
+    color: #fff;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.btn a:hover,
+.btn a:focus {
+    text-decoration: none;
+    color: #fff;
 }
 
 .light {
@@ -248,7 +261,7 @@ img.platz-logo-bg {
 
 }
 
-/*Single Origin header*/
+/*ROASTING philosophy*/
 
 .page-bg {
     height: 100%;
@@ -315,7 +328,7 @@ img.platz-logo-bg {
 
     .text-box {
         width: 486px;
-        margin-top: 20px;
+        margin-top: 40px;
     }
 
     .page-bg-text {
@@ -414,22 +427,19 @@ img.platz-logo-bg {
     text-align: center;
 }
 
-.btn {
+.btn-order-now {
     border-radius: 0;
     font-family: Futura-Medium;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
-}
-
-.btn-default {
     border: 1px solid #fff;
     color: #fff;
     background-color: transparent;
 }
 
-.btn-default:hover,
-.btn-default:focus {
+.btn-order-now:hover,
+.btn-order-now:focus {
     border: 1px solid #fff;
     outline: 0;
     color: #000;
@@ -501,7 +511,7 @@ img.platz-logo-bg {
 .map {
     text-align: center;
     margin-top: 20px;
-    margin-bottom: 150px;
+    margin-bottom: 30px;
     border: 1px solid #D8D8D8;
     box-shadow: 2px 2px 20px 0px rgba(0,0,0,0.50);
 }
@@ -519,6 +529,7 @@ img.platz-logo-bg {
 /*footer*/
 
 footer {
+    margin-top: 100px;
     padding: 50px 0;
     color: #D8D8D8;
     background-color: #4A4A4A;
@@ -558,7 +569,7 @@ footer p {
 
 .blog-bg-heading {
     font-size: 40px;
-    letter-spacing: 3.45px;
+    letter-spacing: 2px;
     
 }
 
@@ -569,19 +580,32 @@ footer p {
     color: #E3CA99;
 }
 
-@media(max-width:768px) {
+
+@media(max-width:1000px) {
     .blog-bg-heading {
-        font-size: 30px;
+        font-size: 35px;
         letter-spacing: 1.5px;
         
     }
 
     .blog-bg-sub-heading {
-        font-size: 16px;
+        font-size: 18px;
         letter-spacing: 0.5px;
     }
+}
 
 
+@media(max-width:768px) {
+    .blog-bg-heading {
+        font-size: 30px;
+        letter-spacing: 1px;        
+    }
+
+    .blog-bg-sub-heading {
+        font-size: 16px;
+        letter-spacing: 0.5px;
+        margin-top: 20px;
+    }
 }
 
 
@@ -633,6 +657,137 @@ footer p {
 .pagination > .active > span:focus {
     background-color: #E3CA99;
     border-color: #ddd;
+}
+
+
+
+/*blog-post-show*/
+
+/*blog-post-header*/
+
+.intro-header {
+  width: 100%;
+  height: 500px;
+  background: asset-url("bg_blogheader.jpg") no-repeat bottom center scroll;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  margin-bottom: 50px;
+}
+
+.intro-header .site-heading,
+.intro-header .post-heading,
+.intro-header .page-heading {
+  padding: 100px 0 50px;
+  color: white;
+}
+
+@media only screen and (min-width: 768px) {
+  .intro-header .site-heading,
+  .intro-header .post-heading,
+  .intro-header .page-heading {
+    padding: 150px 0;
+  }
+}
+.intro-header .site-heading,
+.intro-header .page-heading {
+  text-align: center;
+}
+.intro-header .site-heading h1,
+.intro-header .page-heading h1 {
+  margin-top: 0;
+  font-size: 50px;
+}
+.intro-header .site-heading .subheading,
+.intro-header .page-heading .subheading {
+  font-size: 24px;
+  line-height: 1.1;
+  display: block;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  margin: 10px 0 0;
+}
+@media only screen and (min-width: 768px) {
+  .intro-header .site-heading h1,
+  .intro-header .page-heading h1 {
+    font-size: 80px;
+  }
+}
+.intro-header .post-heading h1 {
+  font-size: 35px;
+}
+.intro-header .post-heading .subheading,
+.intro-header .post-heading .meta {
+  line-height: 1.1;
+  display: block;
+}
+.intro-header .post-heading .subheading {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  margin: 10px 0 30px;
+  font-weight: 600;
+}
+.intro-header .post-heading .meta {
+  font-family: 'Lora', 'Times New Roman', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 20px;
+}
+.intro-header .post-heading .meta a {
+  color: white;
+}
+@media only screen and (min-width: 768px) {
+  .intro-header .post-heading h1 {
+    font-size: 55px;
+  }
+  .intro-header .post-heading .subheading {
+    font-size: 30px;
+  }
+}
+
+.post-date {
+    font-size: 20px;
+
+}
+
+
+
+/*Admin Site*/
+
+.admin-login {
+    margin-top: 150px;
+}
+
+.admin-post, .admin-moderator, .admin-new-post, .admin-edit-post {
+    margin-top: 100px;
+}
+
+.post-form {
+    margin-top: 50px;
+ }
+
+ .post-form label {
+    font-size: 1.5em;
+ }
+
+#search {
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+@media only screen and (min-width: 768px) {
+    #search-bar {
+        width: 60%;
+    }
+}
+
+.checkbox-area {
+    font-size: 12px;
+    font-style: italic;
+    font-family: Times New Roman;
+    color: red;  
 }
 
 

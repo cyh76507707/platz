@@ -1,32 +1,40 @@
-<h1>Admin::Posts#index</h1>
-<p><%= link_to 'New Post', new_admin_post_path %></p>
+<div class="admin-post">
+    <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
 
-<p>
-    <%= render 'search', route: admin_posts_path %>
-</p>
+    <h1>Platz Blog Posts</h1>
+    <hr>        
+    <button class="btn btn-success"><%= link_to 'Create New Post', new_admin_post_path %></button>
+    
+    <%= render 'search', route: admin_posts_path %>     
 
-<table class="table table-bordered table-hover">
-    <thead>
-        <tr>
-            <th>title</th>
-            <th>publish</th>
-            <th>actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        
-        <% @posts.each do |post| %>
+    <table class="table table-bordered table-hover table-responsive">
+        <thead>
             <tr>
-                <td><%= truncate(post.title, length: 60, seperate: '') %></td>
-                <td><%= status_converter(post.publish, truthy: 'Active', falsey: 'Pending') %></td>
-                <td>
-                    <%= link_to 'Edit', edit_admin_post_path(post) %>
-                    <%= link_to 'Show', admin_post_path(post) %>
-                    <%= link_to 'Delete', admin_post_path(post), method: :delete, data: {confirm: 'Are you sure?'} %>
-                </td>
+                <th>title</th>
+                <th>publish</th>
+                <th>actions</th>
             </tr>
-        <% end %>
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            
+            <% @posts.each do |post| %>
+                <tr>
+                    <td><%= link_to admin_post_path(post) do %>
+                            <%= truncate(post.title, length: 60, seperate: '') %>
+                        <% end %>
+                    </td>
+                    <td><%= status_converter(post.publish, truthy: 'Active', falsey: 'Pending') %></td>
+                    <td>
+                        <button class="btn btn-success"><%= link_to 'Edit', edit_admin_post_path(post) %></button>
+                        <button class="btn btn-danger"><%= link_to 'Delete', admin_post_path(post), method: :delete, data: {confirm: 'Are you sure?'} %></button>
+                    </td>
+                </tr>
+            <% end %>
+        </tbody>
+    </table>
 
-<p><%= paginate @posts %></p>
+    <p><%= paginate @posts %></p>
+
+
+    </div>
+</div>

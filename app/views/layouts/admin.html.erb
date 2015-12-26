@@ -21,7 +21,7 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+  <nav class="navbar navbar-inverse navbar-fixed-top" id="admin-navbar" role="navigation">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav-collapse">
@@ -36,12 +36,12 @@
         <ul class="nav navbar-nav navbar-right">
           <li><%= link_to 'Posts', admin_posts_path %></li>
           <li><%= link_to 'Moderators', admin_moderators_path %></li>
-          <li><%= link_to 'Tags', new_admin_tag_path %></li>
-          <li><%= link_to 'Comments', admin_comments_path %></li>
-          <li><%= link_to 'Visitors', admin_visitors_path %></li>
-          <li><%= link_to 'Messages', admin_messages_path %></li>
-          <li><%= link_to 'Notifications', admin_notifications_path %></li>
-          <li><%= link_to 'Logout', logout_path %></li>
+          <li><%= link_to 'Platz Home', root_path %></li>
+          <li><%= link_to logout_path do %>
+                <i class="fa fa-power-off"></i>
+                    Logout
+              <% end %>
+          </li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container -->

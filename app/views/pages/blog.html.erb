@@ -25,7 +25,7 @@
                         </h2>
                         <%= image_tag post.avatar.url, class: 'post-img' %>
                         <h3 class="post-preview-content">
-                            <%= truncate(post.content, length: 120, seperate: '') %>
+                            <%= truncate(strip_tags(post.content), length: 120, seperate: '') %>
                         </h3>
                     <% end %>
                     <p class="post-meta"><%= post.created_at.strftime("%B %d, %Y") %></p>
@@ -37,3 +37,12 @@
         </div>
     </div>
 </div>
+
+
+<!-- Footer -->
+<footer>
+    <div class="container text-center">
+        <p>platzcoffee@gmail.com | 031.214.0726 | 010.2555.0698</p>
+        <p>Copyright &copy; Platz Coffee 2016</p>
+    </div>
+</footer>

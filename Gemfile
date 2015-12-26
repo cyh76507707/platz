@@ -34,6 +34,10 @@ gem 'kaminari', '~> 0.16.3'
 
 gem 'paperclip', '~> 4.2.1'
 
+# Use text editor CKeditor
+gem 'ckeditor'
+gem 'bootsy'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 

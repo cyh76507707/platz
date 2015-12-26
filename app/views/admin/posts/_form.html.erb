@@ -1,24 +1,30 @@
+<form class="post-form">
+
 <p><%= render 'validation_errors', object: @post %></p>
 
 <%= form_for [:admin, @post], :html => { :multipart => true } do |f| %>
-    <p>
+    <div class="field form-group">
         <%= f.label :title %><br />
-        <%= f.text_field :title %>
-    </p>
-    <p>
-        <%= f.label :avatar %><br />
-        <%= f.file_field :avatar %>
-    </p>
-    <p>
+        <%= f.text_field :title, class: 'form-control' %>
+    </div>
+    <div class="field form-group">
+        <%= f.label "Thumbnail Image" %><br />
+        <%= f.file_field :avatar, class: 'form-control' %>
+    </div>
+    <div class="field form-group">
         <%= f.label :content %><br />
-        <%= f.text_field :content %>
-    </p>
-    <p>
-        <%= f.label :publish %><br />
-        <%= f.check_box :publish %>
-    </p>
-    <p>
-        <%= f.select :tag_ids, Tag.all.collect {|t| [t.name, t.id]}, {prompt: 'Select Tag'}, multiple: :true %>
-    </p>
-    <p><%= f.submit %></p>
+        <%= f.bootsy_area :content, class: 'form-control', rows: '30' %>
+    </div>
+    <div class="field form-group checkbox-area">
+        <%= f.check_box :publish, class: 'btn-checkbox' %>
+        <%= f.label "Publish this post" %>
+    </div>
+
+    <div class="actions form-group">
+        <p><%= f.submit "Submit", class: 'btn btn-primary' %></p>
+    </div>
+
 <% end %>
+
+
+</form>
