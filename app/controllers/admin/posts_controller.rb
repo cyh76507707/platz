@@ -21,7 +21,7 @@ class Admin::PostsController < Admin::ApplicationController
     if @post.save
       redirect_to admin_posts_url, notice: 'Post was successfully created'
     else
-      flash[:alert] = 'There was a problem creating post'
+      flash.now[:alert] = 'There was a problem creating post'
       render :new
     end
   end

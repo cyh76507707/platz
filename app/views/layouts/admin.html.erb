@@ -49,10 +49,10 @@
 
 
   <% if flash[:notice] %>
-    <h3 class="bg-primary text-center"><%= flash[:notice] %></h3>
+    <div class="flash-message-notice"><%= flash[:notice] %></div>
   <% end %>
   <% if flash[:alert] %>
-    <h3 class="bg-danger text-center"><%= flash[:alert] %></h3>
+    <div class="flash-message-alert"><%= flash[:alert] %></div>
   <% end %>
 
   <div class="container">

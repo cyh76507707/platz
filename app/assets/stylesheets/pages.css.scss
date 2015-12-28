@@ -756,12 +756,12 @@ footer p {
 
 /*Admin Site*/
 
-.admin-login {
-    margin-top: 150px;
+#admin-login {
+    margin-top: 120px;
 }
 
-.admin-post, .admin-moderator, .admin-new-post, .admin-edit-post {
-    margin-top: 100px;
+#admin-post, #admin-moderator, #admin-new-post, #admin-edit-post {
+    margin-top: 80px;
 }
 
 .post-form {
@@ -784,10 +784,25 @@ footer p {
 }
 
 .checkbox-area {
-    font-size: 12px;
+    font-size: 20px;
     font-style: italic;
     font-family: Times New Roman;
-    color: red;  
+    color: black;  
 }
 
+.flash-message-notice {
+    text-align: center;
+    font-size: 20px;
+    vertical-align: middle;
+    background-color: #F0EFEF;
+    padding-top: 50px;
+}
 
+.flash-message-alert {
+    text-align: center;
+    font-size: 20px;
+    vertical-align: middle;
+    color: white;
+    background-color: red;
+    padding-top: 50px;
+}
