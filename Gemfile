@@ -40,6 +40,7 @@ gem 'font-awesome-sass', '4.2.0'
 gem 'kaminari', '~> 0.16.3'
 
 gem 'paperclip', '~> 4.2.1'
+gem 'aws-sdk'
 
 # Use text editor CKeditor
 gem 'ckeditor'
