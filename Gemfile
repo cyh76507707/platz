@@ -46,6 +46,8 @@ gem 'aws-sdk', '< 2.0'
 gem 'ckeditor'
 gem 'bootsy'
 
+gem 'fog'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
