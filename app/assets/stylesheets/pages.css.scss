@@ -6,6 +6,7 @@
     
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 
 body {
@@ -164,6 +165,35 @@ a:focus {
     vertical-align: middle;
 }
 
+.intro .main-heading h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 55px;
+    letter-spacing: 1px;
+}
+
+.intro .main-subheading {
+    font-size: 20px;
+    
+}
+
+#platz-logo, #platz-logo-white {
+    width: 150px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+
+@media(max-width:500px) {
+    .intro .main-heading h1 {
+        font-size: 25px;
+    }
+    .intro .main-subheading {
+        font-size: 15px;
+    }
+}
+
+
+/*
 .brand-heading{
     font-size: 30px;
     letter-spacing: 3px;
@@ -242,7 +272,8 @@ a:focus {
 
 .page-heading, .page-bg-heading, .page-bg-sub-heading {
     font-family: 'Open Sans', sans-serif;    
-}
+}*/
+
 
 /*page-about platz coffee*/
 
@@ -517,7 +548,7 @@ img.platz-logo-bg {
     padding: 100px 0;
     text-align: center;
     color: #fff;
-    background: asset-url("bg_platz_shop.jpg") no-repeat bottom center scroll;
+    background: asset-url("bg_platzcoffee2.jpg") no-repeat bottom center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
