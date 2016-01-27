@@ -48,6 +48,8 @@ gem 'bootsy'
 
 gem 'fog'
 
+gem 'social-share-button', '~> 0.1.6'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 

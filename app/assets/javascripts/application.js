@@ -15,4 +15,5 @@
 //= require bootsy
 //= require ckeditor/init
 //= require bootstrap-sprockets
+//= require social-share-button
 //= require_tree .
